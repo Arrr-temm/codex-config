@@ -6,7 +6,7 @@ This repository intentionally stores only non-secret, portable Codex state:
 
 - `codex/config.toml`
 - custom skills in `codex/skills/`
-- optional non-secret shared rules in `codex/rules/`
+- optional non-secret shared guidance in `codex/rules/`
 
 This repository must never store:
 
@@ -47,6 +47,18 @@ That command updates the local checkout in `~/.codex/vendor_imports/codex-config
 - each rule under `codex/rules/` -> `~/.codex/rules/<rule-file>`
 
 Existing managed files are backed up before replacement.
+
+## Global Guidance
+
+This repo also installs a shared guidance file at `~/.codex/rules/repo-doc-priority.md`.
+
+Its purpose is to record the preferred cross-project behavior:
+
+- check `AGENTS.md` first when it exists
+- check `PROJECT_SPEC.md` for current project truth
+- use `LivingSpecArchive/INDEX.md` when older project decisions matter
+
+Important: this is best treated as shared guidance, not as a guaranteed platform-level always-on system rule. The most reliable behavior still comes from repo-local docs plus explicit skill usage at project start.
 
 ## Codex Cloud
 
