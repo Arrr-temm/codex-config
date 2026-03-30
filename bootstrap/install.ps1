@@ -115,8 +115,9 @@ if (Test-Path -LiteralPath $sourceRules) {
 }
 
 $wrapperPath = Join-Path $binDir "get-codex-config.ps1"
+$wrapperSource = Join-Path $sourceRoot "bootstrap\install.ps1"
 $wrapper = @"
-& '$repoDir\bootstrap\install.ps1'
+& '$wrapperSource'
 "@
 Set-Content -LiteralPath $wrapperPath -Value $wrapper -Encoding UTF8
 

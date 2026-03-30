@@ -93,7 +93,7 @@ fi
 
 cat > "$BIN_DIR/get-codex-config" <<EOF
 #!/usr/bin/env bash
-exec "$REPO_DIR/bootstrap/install.sh"
+exec "$SOURCE_ROOT/bootstrap/install.sh"
 EOF
 chmod +x "$BIN_DIR/get-codex-config"
 
