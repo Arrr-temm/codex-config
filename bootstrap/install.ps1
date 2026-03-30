@@ -72,6 +72,10 @@ function Ensure-PathContains {
   if (-not $exists) {
     $newPath = if ($parts.Count -gt 0) { ($parts + $Entry) -join ";" } else { $Entry }
     [Environment]::SetEnvironmentVariable("Path", $newPath, "User")
+    $confirmed = [Environment]::GetEnvironmentVariable("Path", "User")
+    if (-not $confirmed -or (($confirmed.Split(";") | ForEach-Object { $_.TrimEnd("\") }) -notcontains $normalizedEntry)) {
+      Set-ItemProperty -Path "HKCU:\Environment" -Name Path -Value $newPath
+    }
   }
 }
 
