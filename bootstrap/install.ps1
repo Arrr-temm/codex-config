@@ -60,6 +60,21 @@ function Sync-DirectoryContents {
   }
 }
 
+function Ensure-PathContains {
+  param([string]$Entry)
+  $userPath = [Environment]::GetEnvironmentVariable("Path", "User")
+  $parts = @()
+  if ($userPath) {
+    $parts = $userPath.Split(";") | Where-Object { $_ }
+  }
+  $normalizedEntry = $Entry.TrimEnd("\")
+  $exists = $parts | Where-Object { $_.TrimEnd("\") -ieq $normalizedEntry }
+  if (-not $exists) {
+    $newPath = if ($parts.Count -gt 0) { ($parts + $Entry) -join ";" } else { $Entry }
+    [Environment]::SetEnvironmentVariable("Path", $newPath, "User")
+  }
+}
+
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
   throw "git is required to install codex-config."
 }
@@ -120,6 +135,14 @@ $wrapper = @"
 & '$wrapperSource'
 "@
 Set-Content -LiteralPath $wrapperPath -Value $wrapper -Encoding UTF8
+
+$cmdWrapperPath = Join-Path $binDir "get-codex-config.cmd"
+$cmdWrapper = @"
+@echo off
+powershell -ExecutionPolicy Bypass -File "$wrapperSource" %*
+"@
+Set-Content -LiteralPath $cmdWrapperPath -Value $cmdWrapper -Encoding ASCII
+Ensure-PathContains -Entry $binDir
 
 $profilePath = $PROFILE.CurrentUserAllHosts
 Ensure-Directory -Path (Split-Path -Parent $profilePath)

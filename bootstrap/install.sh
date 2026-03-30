@@ -97,7 +97,7 @@ exec "$SOURCE_ROOT/bootstrap/install.sh"
 EOF
 chmod +x "$BIN_DIR/get-codex-config"
 
-for profile in "$HOME/.bashrc" "$HOME/.zshrc"; do
+for profile in "$HOME/.bashrc" "$HOME/.zshrc" "$HOME/.profile"; do
   if [ -f "$profile" ]; then
     if ! grep -q 'codex-config PATH' "$profile"; then
       {
