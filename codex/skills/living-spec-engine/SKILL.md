@@ -19,9 +19,11 @@ Treat all three as living documents. Only `PROJECT_SPEC.md` uses strict versioni
 
 - Treat `/PROJECT_SPEC.md` as the single active project spec.
 - Treat `/LivingSpecArchive/` as append-only history for project spec snapshots only.
+- Maintain `/LivingSpecArchive/INDEX.md` as the archive catalog when archived specs exist.
 - Treat `/README.md` as the human entrypoint to the repo.
 - Treat `/AGENTS.md` as the repo-local operating guide for agents working in this project.
 - Keep the three files cross-linked so a reader can move between orientation, operating rules, and project truth.
+- Keep archive navigation explicit inside `PROJECT_SPEC.md` so an agent can discover older versions without guessing.
 - Keep the docs mutually consistent. If the roadmap changes, update the spec. If working practices change, update `AGENTS.md`. If setup or scope framing changes, update `README.md`.
 
 ## Document Roles
@@ -79,12 +81,14 @@ Use this workflow when the repo does not yet have the three core docs, or when t
 - Create `README.md` from [references/readme_template.md](references/readme_template.md)
 - Create `AGENTS.md` from [references/agents_template.md](references/agents_template.md)
 - Create `PROJECT_SPEC.md` from [references/project_spec_template.md](references/project_spec_template.md)
+- Create `LivingSpecArchive/INDEX.md` from [references/archive_index_template.md](references/archive_index_template.md) when initializing archival structure
 
 ### 3. Cross-link them
 
 - `README.md` must point to `AGENTS.md` and `PROJECT_SPEC.md`
 - `AGENTS.md` must point to `README.md` and `PROJECT_SPEC.md`
 - `PROJECT_SPEC.md` must mention `README.md` and `AGENTS.md`
+- `PROJECT_SPEC.md` must also point to `LivingSpecArchive/` and reference revision history
 
 ### 4. Populate them coherently
 
@@ -120,6 +124,7 @@ Use this workflow when the repo does not yet have the three core docs, or when t
 
 - Ensure `LivingSpecArchive/` exists.
 - Write the current full spec to `LivingSpecArchive/LivingSpec_<ProjectName>_<YYYY-MM-DD>_vX.X.md`
+- Maintain `LivingSpecArchive/INDEX.md` so each archived version is listed with version, date, and summary
 - Never overwrite an existing archive file.
 
 ### 4. Apply the revision
@@ -130,6 +135,7 @@ Use this workflow when the repo does not yet have the three core docs, or when t
   - `Status`
   - `What changed in this revision`
 - Update the one-pager, architecture, roadmap, decisions, open questions, and machine-readable YAML so they reflect the same project state.
+- Update the in-spec revision history so the active spec points to prior versions and their archive filenames.
 - If the change materially affects onboarding or repo behavior, update `README.md` and `AGENTS.md` in the same pass.
 
 ### 5. Bump the version
@@ -144,6 +150,7 @@ Use this workflow when the repo does not yet have the three core docs, or when t
 
 - Overwrite only `PROJECT_SPEC.md` after the archive has been written.
 - Update `README.md` and `AGENTS.md` in place when needed.
+- Update `LivingSpecArchive/INDEX.md` when a new archive entry is created.
 - Keep all three documents self-consistent.
 
 ## Collaboration Guidance
@@ -175,4 +182,5 @@ Use this workflow when the repo does not yet have the three core docs, or when t
 - Report which files were created or updated.
 - Report the project spec version change when an archive was written.
 - Report the archive path you created when applicable.
+- Report whether the revision history and archive index were updated.
 - Mention any assumptions, especially project naming, scope framing, or approval points.

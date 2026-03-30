@@ -10,6 +10,7 @@ Use the ASCII-safe headings below unless the existing spec already uses emoji an
 Related documents:
 - Human/project overview: [README.md](README.md)
 - Repo agent instructions: [AGENTS.md](AGENTS.md)
+- Archive catalog: [LivingSpecArchive/INDEX.md](LivingSpecArchive/INDEX.md)
 
 ## 1. REVISION HEADER (HUMAN READABLE)
 
@@ -112,6 +113,20 @@ revision:
   last_updated: ""
   summary: ""
 ```
+
+---
+
+## 8. ARCHIVE & REVISION HISTORY
+
+Archive location:
+- [LivingSpecArchive/](LivingSpecArchive/)
+- [LivingSpecArchive/INDEX.md](LivingSpecArchive/INDEX.md)
+
+Revision history:
+
+| Version | Date | Archive File | Summary |
+|---|---|---|---|
+| vX.X | YYYY-MM-DD | `LivingSpec_<ProjectName>_<YYYY-MM-DD>_vX.X.md` | ... |
 ````
 
 Archive files must use this naming pattern:
