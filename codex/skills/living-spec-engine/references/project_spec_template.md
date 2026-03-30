@@ -10,6 +10,7 @@ Use the ASCII-safe headings below unless the existing spec already uses emoji an
 Related documents:
 - Human/project overview: [README.md](README.md)
 - Repo agent instructions: [AGENTS.md](AGENTS.md)
+- Recent lightweight updates: [CHANGE_STACK.md](CHANGE_STACK.md)
 - Archive catalog: [LivingSpecArchive/INDEX.md](LivingSpecArchive/INDEX.md)
 
 ## 1. REVISION HEADER (HUMAN READABLE)

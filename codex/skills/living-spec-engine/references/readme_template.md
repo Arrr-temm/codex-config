@@ -25,6 +25,7 @@ Explain the problem it solves and who it helps.
 
 - Repo operating guidance for agents: [AGENTS.md](AGENTS.md)
 - Current project source of truth: [PROJECT_SPEC.md](PROJECT_SPEC.md)
+- Recent lightweight updates: [CHANGE_STACK.md](CHANGE_STACK.md)
 
 ## Working Agreement
 

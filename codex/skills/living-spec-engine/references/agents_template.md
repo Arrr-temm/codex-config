@@ -13,7 +13,8 @@ This repository is developed with agent assistance for a primarily non-technical
 
 1. Read [README.md](README.md) for project orientation.
 2. Read [PROJECT_SPEC.md](PROJECT_SPEC.md) before making product, architecture, or roadmap changes.
-3. Treat `PROJECT_SPEC.md` as the current project truth.
+3. Read [CHANGE_STACK.md](CHANGE_STACK.md) for recent lightweight updates when it exists.
+4. Treat `PROJECT_SPEC.md` as the current stable project truth.
 
 ## Collaboration Rules
 
@@ -26,8 +27,10 @@ This repository is developed with agent assistance for a primarily non-technical
 ## Documentation Rules
 
 - Keep [README.md](README.md), [AGENTS.md](AGENTS.md), and [PROJECT_SPEC.md](PROJECT_SPEC.md) aligned.
+- Keep [CHANGE_STACK.md](CHANGE_STACK.md) concise and current.
 - Update `README.md` when project framing, setup, or current status changes.
 - Update `PROJECT_SPEC.md` when product truth, architecture, roadmap, or decisions change.
+- Use `CHANGE_STACK.md` for lightweight state that is not yet worth a formal spec revision.
 - Archive the current `PROJECT_SPEC.md` before rewriting it.
 
 ## Delivery Rules
@@ -40,6 +43,7 @@ This repository is developed with agent assistance for a primarily non-technical
 ## Living Spec Rules
 
 - Active spec path: `PROJECT_SPEC.md`
+- Lightweight staged updates: `CHANGE_STACK.md`
 - Archive folder: `LivingSpecArchive/`
 - Archive filename pattern: `LivingSpec_<ProjectName>_<YYYY-MM-DD>_vX.X.md`
 
