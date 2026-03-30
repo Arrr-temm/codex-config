@@ -1,0 +1,4 @@
+interface:
+  display_name: "Living Spec Engine"
+  short_description: "Maintain versioned living project specs"
+  default_prompt: "Use $living-spec-engine to update PROJECT_SPEC.md and archive the prior version."
