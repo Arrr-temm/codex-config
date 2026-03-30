@@ -7,6 +7,10 @@ Use the ASCII-safe headings below unless the existing spec already uses emoji an
 ````md
 # PROJECT SPECIFICATION (LIVING DOCUMENT)
 
+Related documents:
+- Human/project overview: [README.md](README.md)
+- Repo agent instructions: [AGENTS.md](AGENTS.md)
+
 ## 1. REVISION HEADER (HUMAN READABLE)
 
 **Version:** vX.X  
