@@ -1,0 +1,4 @@
+interface:
+  display_name: "Living Spec Skill"
+  short_description: "Stage and promote living repo docs"
+  default_prompt: "Use $living-spec-skill to set up or sync README.md, AGENTS.md, PROJECT_SPEC.md, and CHANGE_STACK.md for this project."

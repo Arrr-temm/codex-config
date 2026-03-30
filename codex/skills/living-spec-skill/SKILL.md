@@ -1,5 +1,5 @@
 ---
-name: living-spec-engine
+name: living-spec-skill
 description: Bootstrap and maintain a lightweight repo-local documentation system for `README.md`, `AGENTS.md`, `PROJECT_SPEC.md`, and an optional `CHANGE_STACK.md`. Use when Codex needs to start a new project from an idea, keep project state durable across stop-start work, stage small changes without rewriting every document, promote meaningful approved changes into the versioned project spec, or keep human onboarding, agent instructions, and project truth aligned with minimal token overhead.
 ---
 
